@@ -1,9 +1,7 @@
 import { combineReducers } from 'redux';
-import WeatherReducer from './reducer_weather';
+import weather from './reducer_weather';
 
-const rootReducer = combineReducers({
-  // state: (state = {}) => state
-  weather: WeatherReducer
-});
-
-export default rootReducer;
+// The RootReducer is used to collect all the different reducers' states and creating one reducer function to pass to the createStore method 
+export default combineReducers({
+  weather
+})
